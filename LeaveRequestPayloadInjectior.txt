@@ -1,0 +1,73 @@
+#!/bin/bash
+
+input_file='/home/zman/RedFolder/TinkerLab/Payloads/Adversary Attack Payloads/Injection/SQL/Generic Error Based .txt'
+# Define variables from the provided coordinates
+initial_date_x=547
+initial_date_y=623
+
+create_request_x=1596
+create_request_y=977
+
+Type_selection_x=923
+Type_selection_y=551
+
+vacation_quota_x=704
+vacation_quota_y=631
+
+Test_Comment_x=1059
+Test_Comment_y=567
+
+Save_x=1229
+Save_y=836
+
+ok_x=1096
+ok_y=769
+
+info_ok_x=1064
+info_ok_y=620
+
+re_click_initial_date_x=547
+re_click_initial_date_y=623
+
+cancel_request_x=1753
+cancel_request_y=599
+
+delete_item_x=993
+delete_item_y=614
+
+Info_delete_ok_x=1066
+Info_delete_ok_y=625
+
+# Input file containing the strings to process
+
+# Loop through each string in the file
+while IFS= read -r line; do
+    # Initial Upload
+    xdotool mousemove "$initial_date_x" "$initial_date_y" click 1
+    sleep 5 
+    xdotool mousemove "$create_request_x" "$create_request_y" click 1
+    sleep 5
+    xdotool mousemove "$choose_file_x" "$choose_file_y" click 1
+    sleep 5
+    xdotool mousemove "$Type_selection_x" "$Type_selection_y" click 1
+    sleep 5
+    xdotool mousemove "$vacation_quota_x" "$vacation_quota_y" click 1
+    sleep 5
+    xdotool mousemove "$Test_Comment_x" "$Test_Comment_y" click 1
+    xdotool type "$line"
+    sleep 5
+    xdotool mousemove "$Save_x" "$Save_y" click 1
+    sleep 5
+    xdotool mousemove "$ok_x" "$ok_y" click 1
+    sleep 5
+    xdotool mousemove "$info_ok_x" "$info_ok_y" click 1
+    sleep 5
+    xdotool mousemove "$re_click_initial_date_x" "$re_click_initial_date_y" click 1
+    sleep 5
+    xdotool mousemove "$cancel_request_x" "$cancel_request_y" click 1
+    sleep 5
+    xdotool mousemove "$delete_item_x" "$delete_item_y" click 1
+    sleep 6
+    xdotool mousemove "$Info_delete_ok_x" "$Info_delete_ok_y" click 1
+    sleep 5
+done < "$input_file"
