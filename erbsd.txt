@@ -1,4 +1,0 @@
-curl --location 'http://xtract.zalaris.com/ai/process' \
---form 'x-api-key="4Eo8s6FmwDhYVUNWAe3R0OABINwvP47DrNjKDB-qUPI"' \
---form 'file=@"/home/zman/Pictures/bill .pdf"' \
---form 'file=@"/home/zman/Pictures/bill.png"'
