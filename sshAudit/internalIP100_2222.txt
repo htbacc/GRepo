@@ -1,1 +1,0 @@
-[0;31m[exception] did not receive banner: Connection reset by peer[0m
