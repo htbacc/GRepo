@@ -1,0 +1,52 @@
+POST /web/client/file?path=%2F%2Feicar.exe HTTP/2
+
+Host: dev-sftpgo.zalaris.com
+
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiV2ViQ2xpZW50IiwiMTcyLjI5LjI5LjUiXSwiZXhwIjoxNzUwODYzNDcyLCJqdGkiOiJkMWUwamczODQ5NWM3MzkwOWgwMCIsIm5iZiI6MTc1MDg2MjI0MiwicGVybWlzc2lvbnMiOm51bGwsInN1YiI6IjE3NTA2NTg1NDEyODAiLCJ1c2VybmFtZSI6InRlc3QifQ.MuBqimc2RwI4e2zj2ZwvtFJrSEUmReEcofwuIy-nzgU; _gcl_au=1.1.1131503025.1744031046; _ga=GA1.1.811876401.1744031047; hubspotutk=cdefa6fdb081482ef354591f2c6802e3; _ga_RM4D8JWQH4=GS2.1.s1749467270$o3$g0$t1749467270$j60$l0$h0; __hstc=35319230.cdefa6fdb081482ef354591f2c6802e3.1744031048050.1746019880267.1749467275069.3; ApplicationGatewayAffinityCORS=e5489642aa4a223024ecdb5dc9343833; ApplicationGatewayAffinity=e5489642aa4a223024ecdb5dc9343833
+
+Content-Length: 0
+
+Sec-Ch-Ua-Platform: "Linux"
+
+X-Csrf-Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiQ1NSRiIsIjE3Mi4yOS4yOS41Il0sImV4cCI6MTc1MDg4NDEwMywianRpIjoiZDFlMGw5cjg0OTVjNzM5MDloZGciLCJuYmYiOjE3NTA4NjI0NzN9.w5KFa9v6SfwCy48TdhdM7nJtPCdQfmMVkrgkZzrgpVQ
+
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36
+
+Accept: application/json, text/plain, */*
+
+Sec-Ch-Ua: "Chromium";v="133", "Not(A:Brand";v="99"
+
+Content-Type: application/x-www-form-urlencoded
+
+Sec-Ch-Ua-Mobile: ?0
+
+Origin: https://dev-sftpgo.zalaris.com
+
+Sec-Fetch-Site: same-origin
+
+Sec-Fetch-Mode: cors
+
+Sec-Fetch-Dest: empty
+
+Referer: https://dev-sftpgo.zalaris.com/web/client/editfile?path=%2Feicar.com.txt&_=1750862395
+
+Accept-Encoding: gzip, deflate, br
+
+Accept-Language: en-US,en;q=0.9
+
+Priority: u=1, i
+
+
+HTTP/2 201 Created
+
+Date: Wed, 25 Jun 2025 14:42:00 GMT
+
+Content-Type: application/json
+
+Content-Length: 31
+
+Server: SFTPGo/2.6.6
+
+
+
+{"message":"Upload completed"}
