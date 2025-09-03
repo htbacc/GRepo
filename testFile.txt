@@ -1,1 +1,33 @@
-The SSH service was found to support weak or outdated cryptographic algorithms for key exchange (e.g., certain Diffie-Hellman groups) and host key authentication (e.g., older ECDSA variants). These algorithms are considered less secure against modern cryptographic attacks and may expose encrypted sessions to risks such as downgrade or brute-force attacks. Restricting the SSH configuration to modern, strong algorithms only is recommended to ensure confidentiality and integrity of communications.
+10.192.92.6 -p 2020
+
+# key exchange algorithms
+(kex) diffie-hellman-group14-sha256         -- [warn] 2048-bit modulus only provides 112-bits of symmetric strength
+                                            `- [info] available since OpenSSH 7.3, Dropbear SSH 2016.73
+(kex) diffie-hellman-group-exchange-sha256 (2048-bit) -- [warn] 2048-bit modulus only provides 112-bits of symmetric strength
+                                                      `- [info] available since OpenSSH 4.4
+
+10.192.92.5 -p 2020 
+
+# key exchange algorithms
+
+(kex) diffie-hellman-group14-sha256         -- [warn] 2048-bit modulus only provides 112-bits of symmetric strength
+                                            `- [info] available since OpenSSH 7.3, Dropbear SSH 2016.73
+(kex) diffie-hellman-group-exchange-sha256 (2048-bit) -- [warn] 2048-bit modulus only provides 112-bits of symmetric strength
+                                                      `- [info] available since OpenSSH 4.4
+
+10.192.92.7 -p 2020 
+
+# key exchange algorithms
+(kex) diffie-hellman-group14-sha256         -- [warn] 2048-bit modulus only provides 112-bits of symmetric strength
+                                            `- [info] available since OpenSSH 7.3, Dropbear SSH 2016.73
+(kex) diffie-hellman-group-exchange-sha256 (2048-bit) -- [warn] 2048-bit modulus only provides 112-bits of symmetric strength
+                                                      `- [info] available since OpenSSH 4.4
+
+
+10.192.92.8 -p 22 
+
+
+
+
+
+
