@@ -1,0 +1,2 @@
+sap, "hana", "netweaver","successfactors","apache","httpd","nginx","java","linux","exim","smtpd","node","squid","react","http","ftp","tcp","icmp","rdp","ssh","telnet","smtp","dns","tftp","dhcp","tls","arp","bgp","smb","igmp","rpc","onedrive","teams","edge","word","excel","office","powershell","powerpoint","chrome","7zip","moveit","adobe","jdk","jre","guacamole","splunk","suricata","checkmk","microsoftft, copilot , perplexity
+ , chatgpt , kubernetes , cisco
