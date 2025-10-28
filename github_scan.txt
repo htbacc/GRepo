@@ -1,2 +1,0 @@
-  sudo bomber scan --provider=ossindex --username=htbacc0unt@gmail.com --token=db88fe6ab688581963698d1ff947d68a642bf93f helpdesk-backend-sbom.json
-   54  sudo bomber scan --provider=osv --username=htbacc0unt@gmail.com --token=db88fe6ab688581963698d1ff947d68a642bf93f helpdesk-backend-sbom.json
