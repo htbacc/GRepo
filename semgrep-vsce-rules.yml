@@ -1,0 +1,125 @@
+rules:
+  - id: vsce-eval
+    pattern: eval($X)
+    message: "Dynamic eval — potential remote code execution risk"
+    severity: ERROR
+    languages: [javascript, typescript]
+
+  - id: vsce-new-function
+    pattern: new Function($ARGS)
+    message: "Dynamic function constructor — potential code injection"
+    severity: ERROR
+    languages: [javascript, typescript]
+
+  - id: vsce-child-process-require
+    pattern: require("child_process")
+    message: "Requires child_process — can spawn system processes"
+    severity: ERROR
+    languages: [javascript, typescript]
+
+  - id: vsce-child-process-use
+    pattern-either:
+      - pattern: child_process.exec($CMD)
+      - pattern: child_process.execSync($CMD)
+      - pattern: child_process.spawn($CMD, ...)
+      - pattern: exec($CMD)
+      - pattern: spawn($CMD, ...)
+    message: "Spawning/executing processes — inspect command arguments"
+    severity: ERROR
+    languages: [javascript, typescript]
+
+  - id: vsce-vm-module
+    pattern: require("vm")
+    message: "Uses vm module (runtime execution) — inspect executed code"
+    severity: ERROR
+    languages: [javascript, typescript]
+
+  - id: vsce-dynamic-require
+    pattern: require($X)
+    metavariable-regex:
+      X: ".*\\+.*|\\$\\{|process\\.env|\\w+"
+    message: "Dynamic require — may load untrusted modules or allow path manipulation"
+    severity: ERROR
+    languages: [javascript, typescript]
+
+  - id: vsce-fs-access
+    pattern-either:
+      - pattern: require("fs")
+      - pattern: fs.readFile($A)
+      - pattern: fs.readFileSync($A)
+      - pattern: fs.writeFile($A)
+      - pattern: fs.writeFileSync($A)
+    message: "Filesystem access detected — inspect paths for secrets or home directory reads"
+    severity: WARNING
+    languages: [javascript, typescript]
+
+  - id: vsce-workspace-fs-api
+    pattern: vscode.workspace.fs.$X
+    message: "Uses vscode.workspace.fs API — can read/write workspace files"
+    severity: WARNING
+    languages: [javascript, typescript]
+
+  - id: vsce-process-env-usage
+    pattern: process.env
+    message: "Reads environment variables — may access secrets or tokens"
+    severity: WARNING
+    languages: [javascript, typescript]
+
+  - id: vsce-network-fetch-axios
+    pattern-either:
+      - pattern: fetch($URL)
+      - pattern: import axios from "axios"
+      - pattern: axios.$METHOD(...)
+    message: "Network calls detected — review endpoints and data transmitted"
+    severity: WARNING
+    languages: [javascript, typescript]
+
+  - id: vsce-http-module
+    pattern: require("http") or require("https")
+    message: "Uses http/https modules — outbound network capability"
+    severity: WARNING
+    languages: [javascript, typescript]
+
+  - id: vsce-ws-or-net
+    pattern-either:
+      - pattern: require("ws")
+      - pattern: require("net")
+    message: "Websocket or raw TCP usage detected — inspect persistent connections"
+    severity: WARNING
+    languages: [javascript, typescript]
+
+  - id: vsce-exec-vscode-commands
+    pattern: vscode.commands.executeCommand($CMD, ...)
+    message: "Calls executeCommand — can trigger other extensions or VS Code commands; validate argument sources"
+    severity: WARNING
+    languages: [javascript, typescript]
+
+  - id: vsce-ssh-or-keys-reference
+    pattern-either:
+      - pattern: "~/.ssh"
+      - pattern: "id_rsa"
+      - pattern: "id_ed25519"
+      - pattern: "private_key"
+    message: "Hardcoded references to SSH/private keys — inspect for key reads"
+    severity: ERROR
+    languages: [javascript, typescript, json]
+
+  - id: vsce-telemetry-api
+    pattern-either:
+      - pattern: telemetryService.sendEvent($X)
+      - pattern: appInsights.trackEvent($X)
+      - pattern: vscode.env.machineId
+      - pattern: vscode.env.sessionId
+    message: "Telemetry/environment usage — may collect identifying information"
+    severity: INFO
+    languages: [javascript, typescript]
+
+  - id: vsce-data-upload
+    pattern-either:
+      - pattern: fetch($URL, $OPTS)
+      - pattern: axios.post($URL, $DATA)
+      - pattern: xhr.open("POST", $URL, ...)
+    message: "Possible outbound data upload — review GDPR and data minimization"
+    severity: WARNING
+    languages: [javascript, typescript]
+
