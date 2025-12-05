@@ -1,0 +1,5 @@
+const originalParse = JSON.parse;
+JSON.parse = function(input) {
+    console.log("[JSON.parse CALLED WITH]:", input);
+    return originalParse.call(this, input);
+};
