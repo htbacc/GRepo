@@ -1,0 +1,54 @@
+PDF Payloads 
+
+   11   exploit/windows/fileformat/adobe_pdf_embedded_exe                        2010-03-29       excellent  No     Adobe PDF Embedded EXE Social Engineering
+   12   exploit/windows/fileformat/adobe_pdf_embedded_exe_nojs                   2010-03-29       excellent  No     Adobe PDF Escape EXE Social Engineering (No JavaScript)
+   13   exploit/windows/fileformat/adobe_reader_u3d                              2011-12-06       average    No     Adobe Reader U3D Memory Corruption Vulnerability
+   70   auxiliary/fileformat/badpdf                                              .                normal     No     BADPDF Malicious PDF Creator
+  100  exploit/windows/fileformat/coolpdf_image_stream_bof                      2013-01-18       normal     No     Cool PDF Image Stream Buffer Overflow
+   101  exploit/windows/fileformat/corelpdf_fusion_bof                           2013-07-08       normal     No     Corel PDF Fusion Stack Buffer Overflow
+   130  exploit/windows/fileformat/foxit_reader_uaf                              2018-04-20       normal     No     Foxit PDF Reader Pointer Overwrite UAF
+   131  exploit/windows/fileformat/foxit_title_bof                               2010-11-13       great      No     Foxit PDF Reader v4.1.1 Title Stack Buffer Overflow
+   261  auxiliary/fileformat/maldoc_in_pdf_polyglot                              .                normal     No     Maldoc in PDF Polyglot converter
+   280  exploit/windows/fileformat/nuance_pdf_launch_overflow                    2010-10-08       great      No     Nuance PDF Reader v6.0 Launch Stack Buffer Overflow
+293  exploit/windows/fileformat/shaper_pdf_bof                                2015-10-03       normal     No     PDF Shaper Buffer Overflow
+   373  exploit/windows/browser/verypdf_pdfview                                  2008-06-16       normal     No     VeryPDF PDFView OCX ActiveX OpenPDF Heap Overflow
+
+
+Next JS File
+
+   4  exploit/multi/http/react2shell_unauth_rce_cve_2025_55182            2025-12-03       excellent  Yes    Unauthenticated RCE in React and Next.js
+
+
+Node JS
+
+   9   auxiliary/gather/mongodb_js_inject_collection_enum      2014-06-07       normal     No     MongoDB NoSQL Collection Enumeration Via Injection
+   10  auxiliary/dos/http/nodejs_pipelining                    2013-10-18       normal     Yes    Node.js HTTP Pipelining Denial of Service
+   11  exploit/multi/misc/nodejs_v8_debugger                   2016-08-15       excellent  Yes    NodeJS Debugger Command Injection
+   12  exploit/multi/fileformat/nodejs_js_yaml_load_code_exec  2013-06-28       excellent  No     Nodejs js-yaml load() Code Execution
+
+
+Nginx
+
+   3   exploit/linux/http/nginx_chunked_size                2013-05-07       great      Yes    Nginx HTTP Server 1.3.9-1.4.0 Chunked Encoding Stack Buffer Overflow
+   4     \_ target: Ubuntu 13.04 32bit - nginx 1.4.0        .                .          .      .
+   5     \_ target: Debian Squeeze 32bit - nginx 1.4.0      .                .          .      .
+   6   auxiliary/scanner/http/nginx_source_disclosure       .                normal     No     Nginx Source Code Disclosure/Download
+
+
+MongoDB
+
+   1  auxiliary/scanner/mongodb/mongodb_login                       .                normal  No     MongoDB Login Utility
+   2  auxiliary/gather/mongodb_js_inject_collection_enum            2014-06-07       normal  No     MongoDB NoSQL Collection Enumeration Via Injection
+   3  auxiliary/gather/mongodb_ops_manager_diagnostic_archive_info  2023-06-09       normal  Yes    MongoDB Ops Manager Diagnostic Archive Sensitive Information Retriever
+   4  exploit/linux/misc/mongod_native_helper                       2013-03-24       normal  No     MongoDB nativeHelper.apply Remote Code Execution
+
+API 
+
+   227   auxiliary/scanner/http/elasticsearch_traversal                                                .                normal     Yes    ElasticSearch Snapshot API Directory Traversal
+   616   auxiliary/scanner/http/joomla_api_improper_access_checks                                      2023-02-01       normal     Yes    Joomla API Improper Access Checks
+  619   exploit/multi/http/kong_gateway_admin_api_rce                                                 2020-10-13       excellent  Yes    Kong Gateway Admin API Remote Code Execution
+
+
+
+
+
